@@ -1,5 +1,6 @@
 #include <iostream>
 #include <iomanip>
+#include <cstring>
 
 int main(void){
 
@@ -11,12 +12,16 @@ int main(void){
 
   cout << "Dados da primeira pessoa:\n";
   cout << "Nome: ";
-  cin >> nome1;
+  //cin.ignore();                 //limpar o \n
+  getline(cin, nome1);           //ler a linha inteira
   cout << "\nIdade: ";
   cin >> idade1;
-  cout << "\n\nDados da segunda pessoa:\n";
+  cin.ignore();
+  
+  cout << "\nDados da segunda pessoa:\n";
   cout << "Nome: ";
-  cin >> nome2;
+  //cin.ignore();
+  getline(cin, nome2);
   cout << "\nIdade: ";
   cin >> idade2;
 
